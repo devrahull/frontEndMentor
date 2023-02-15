@@ -12,6 +12,167 @@
 }
 
 body{
+    font-family: 'League Spartan', sans-serif;
+    font-size: 15px;
+    color:hsl(303, 10%, 53%);
+}
 
+.top{
+    display: flex;
+    max-width:100%;
+    height:15rem;
+    margin-bottom:5rem;
+    margin-top:7rem;
+    margin-left:7rem;
+    margin-right:7rem;
+    justify-content: space-between;
+
+}
+
+.heading{
+    flex:50%;
+    /* border: solid; */
+    text-align: center;
+    width:15rem;
+    text-align-last: left;
+
+}
+
+.heading h1{
+    color:hsl(300, 43%, 22%);
+    font-weight: 700;
+}
+
+.heading p{
+    margin-top:1rem;
+    font-weight: 400;
+    text-align: left;
+    
+}
+
+.rating{
+    flex:50%;
+    /* border:solid; */
+}
+
+.rating ul li{
+
+    background-color:hsl(300, 24%, 96%);
+    border-radius:.5rem;
+    width:26rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+
+}
+
+.rating ul li img{
+    margin:.3rem
+}
+
+
+.rating ul li span{
+    color:hsl(300, 43%, 22%);
+    font-weight: 500;
+}
+
+.star{
+    margin:2rem;
+}
+
+.rating1{
+    margin-bottom:1rem;
+    margin-top:1rem;
+}
+
+.rating2{
+    position:relative;
+    margin-bottom:1rem;
+    left:5rem;
+
+}
+
+.rating3{
+    position:relative;
+    left:10rem;
+}
+
+.bottom{
+
+    display: flex;
+
+}
+
+.card{
+    background-color:hsl(300, 43%, 22%);
+    /* border:solid; */
+    height: 30vh;
+    width: 25vw;
+    margin:1rem;
+    border-radius:.5rem;
+    text-align: center;
+    padding:.7rem;
+
+
+}
+
+.card p{
+    display:flex;
+    justify-content: space-between;
+    /* border:solid; */
+}
+
+.image{
+
+    border-radius: 50%;
+    height:2.8rem;
+    width: 2.8rem;
+    margin:.8rem;
+}
+
+.card1{
+    position:relative;
+    bottom:7rem;
+    left:7rem;
+
+}
+
+.card2{
+    position:relative;
+    left:7rem;
+    bottom:5rem;
+}
+
+.card3{
+    position:relative;
+    left:7rem;
+    bottom:3rem;
+}
+.user__name{
+    position:relative;
+    bottom:3.3rem;
+    right:4rem;
+    font-weight: 500;
+}
+
+.user__name h4{
+    margin-bottom:.3rem;
+    font-weight: 500;
+}
+
+.user__reveiw{
+    color:white;
+    position:relative;
+    bottom:1.9rem;
+    line-height: 1.5;
+    text-align: left;
+    font-weight: 400;
+
+}
+
+
+
+ul{
+    list-style-type: none;
 }
 
