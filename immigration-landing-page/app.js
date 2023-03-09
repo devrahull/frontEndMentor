@@ -140,4 +140,42 @@ document.querySelector('.cross-btn').addEventListener('click', ()=>{
   body.style.overflow="auto";
   document.querySelector('.cross-btn').style.display="none";
 
-})
+});
+
+
+
+
+
+// Get references to the DOM elements
+
+const slides = document.querySelectorAll('.testimonial-slides-content');
+
+
+// Set the initial slide index 
+let slideIndex = 0;
+
+
+// Function to start the automatic slide timer
+
+  setInterval(() => {
+    slideIndex++;
+    if (slideIndex >= slides.length) {
+      slideIndex = 0;
+    }
+    updateSlide();
+  }, 5000);
+
+
+// Function to update the current slide
+function updateSlide() {
+  // Hide all slides
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display="none";
+  }
+  
+  slides[slideIndex].style.display="block";
+  // slides[slideIndex].style.border=".5px solid black";
+  // slides[slideIndex].style.
+
+}
+

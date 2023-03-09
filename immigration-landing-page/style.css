@@ -4,8 +4,11 @@
   padding: 0;
   box-sizing: border-box;
 }
+html{
+  /* font-size: 62.5%; */
+}
 body{
-  font-size: 62.5%;
+
   background-color: #f5f5f5;
   font-family: 'Fredoka One', cursive;
   font-family: 'Open Sans', sans-serif;
@@ -320,6 +323,14 @@ button:hover {
   margin:auto;
   height: .5rem;
 }
+.hor-div.testup{
+  margin-top:1rem;
+  width:10%;
+}
+.hor-div.testdown{
+  margin-bottom:1rem;
+  width:10%;
+}
 
 .salary{
   display:flex;
@@ -527,8 +538,67 @@ footer{
   transform: scale(1.1);
   z-index: 1;
 }
+
+
 /* 
 https://airborneimmigration.com/?gclid=CjwKCAiA3pugBhAwEiwAWFzwdbEKBuR4L9B5i41_fXn2el4fN6DtkL6KHuV4mU-jIJIYvzjgymp0_hoCIEkQAvD_BwE */
+
+
+
+
+
+/* /////////////////////////////// */
+
+.testimonial {
+  background-color: #f9f9f9;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.testimonial-container {
+  display: flex;
+  justify-content: space-between;
+  /* overflow-x: scroll; */
+  /* scroll-behavior: smooth; */
+  width: 100%;
+  /* max-width: 1200px; */
+  margin: 0 auto;
+}
+.testimonial-slides-content{
+  width:50%;
+  height: auto;
+  margin:auto;
+
+}
+.testimonial-item {
+  flex-basis: calc(33.33% - 20px);
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.testimonial-item:hover {
+  transform: translateY(-10px);
+}
+
+.testimonial-item img {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  margin-bottom:1rem;
+}
+
+.testimonial-item h4 {
+  margin-bottom: 5px;
+}
+
+.testimonial-item p:last-child {
+  margin-top: 5px;
+  font-size: 0.8em;
+}
+
 
 
 @media screen and (max-width: 767px) {
