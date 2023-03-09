@@ -25,7 +25,7 @@ const cl5 = document.querySelector(".cl5");
 const cl6 = document.querySelector(".cl6");
 
 km1.addEventListener('click',(e)=>{
-
+    
     hc1.style.display="block";
     body.style.overflow="hidden";
     
@@ -113,3 +113,31 @@ window.onscroll = function() {
       behavior: "smooth"
     });
   });
+
+
+document.querySelector(".getInTouch").addEventListener("click",()=>{
+
+    const heroFormDiv = document.querySelector(".form-div");
+    heroFormDiv.style.display="block";
+    body.style.overflow="hidden";
+    document.querySelector('.cross-btn').style.display="block";
+
+});
+document.querySelector(".getInTouch1").addEventListener("click",()=>{
+
+  const heroFormDiv = document.querySelector(".form-div");
+  heroFormDiv.style.display="block";
+  body.style.overflow="hidden";
+  document.querySelector('.cross-btn').style.display="block";
+
+});
+
+
+document.querySelector('.cross-btn').addEventListener('click', ()=>{
+
+  const heroFormDiv = document.querySelector(".form-div");
+  heroFormDiv.style.display="none";
+  body.style.overflow="auto";
+  document.querySelector('.cross-btn').style.display="none";
+
+})
