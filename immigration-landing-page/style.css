@@ -47,7 +47,7 @@ nav{
 
 }
 
-.nav-links a{
+/* .nav-links a{
   font-size: 1rem;
   color:white;
   opacity:.8;
@@ -63,6 +63,10 @@ nav{
 }
 .nav-links a:hover{
  opacity: 1;
+} */
+
+nav button{
+  background-color: #e8000d;
 }
 
 .hero-section{
@@ -156,10 +160,13 @@ button {
   border: none;
   cursor: pointer;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5); 
+  transition: transform 0.3s ease-out;
 }
 
 button:hover {
   background-color: #0056b3;
+  transform: scale(1.1);
+  z-index: 1;
 }
 
 .immigration{
@@ -265,10 +272,17 @@ button:hover {
   flex-basis: calc(33.33% - 10px);
   margin-right: 10px;
   margin-bottom: 10px;
-  height:30rem;
+  height:22rem;
   /* position: relative; */
   background-color: white;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease-out;
+}
+
+.card:hover{
+  transform: scale(1.1);
+  /* transform: translateY(-10px); */
+  z-index: 1;
 }
 
 /* .card:nth-child(3n){
@@ -276,11 +290,12 @@ button:hover {
 } */
 
 .content{
-
+  height: 100%;
+  width:100%;
   display:flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content:space-between;
+  align-items:center;
   gap:1rem;
   padding:2rem;
 }
@@ -474,11 +489,20 @@ footer{
   width:2rem;
   border-radius:.5rem;
   /* background-color: #939393; */
-  background-color:#0056b3;
+  /* background-color:#0056b3; */
+  background-color: white;
+  border:.1px solid #939393;
   display: none;
   transition:opacity .1s;
   cursor: pointer;
-  z-index: 99;
+  /* z-index: 99; */
+  transition: transform 0.3s ease-out;
+
+}
+
+#upward-icon:hover{
+  transform: scale(1.1);
+  z-index: 1;
 }
 
 .svg-logo{
@@ -497,6 +521,11 @@ footer{
   right:1rem;
   display:none;
   z-index:99;
+  transition: transform 0.3s ease-out;
+}
+.cross-btn:hover{
+  transform: scale(1.1);
+  z-index: 1;
 }
 /* 
 https://airborneimmigration.com/?gclid=CjwKCAiA3pugBhAwEiwAWFzwdbEKBuR4L9B5i41_fXn2el4fN6DtkL6KHuV4mU-jIJIYvzjgymp0_hoCIEkQAvD_BwE */
