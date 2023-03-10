@@ -505,8 +505,8 @@ footer{
   height: 3rem;
   width: 3rem;
   position: fixed;
-  top:11rem;
-  right:25%;
+  top:20%;
+  right:30%;
   display:none;
   z-index:99;
   transition: transform 0.3s ease-out;
@@ -578,7 +578,7 @@ https://airborneimmigration.com/?gclid=CjwKCAiA3pugBhAwEiwAWFzwdbEKBuR4L9B5i41_f
 
 
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 766px) {
   /* Styles for mobile devices */
 
   html{
@@ -609,26 +609,24 @@ https://airborneimmigration.com/?gclid=CjwKCAiA3pugBhAwEiwAWFzwdbEKBuR4L9B5i41_f
 
 .assessment{
   height:auto;
-  display:flex;
+  /* display:flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
-  padding:2rem;
+  align-items: center; */
+  display: block;
+  text-align: center;
+  padding:4rem 2rem 2rem 2rem;
 }
 .assessment .left{
-  flex:1;
-  width:100vw;
-  height:auto;
-  gap:5rem;
-  padding:2rem;
-  justify-content: center;
-  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap:2rem;
+  padding:0rem;
 }
 
 .assessment .right{
-  flex:1;
-  padding:5rem;
-  padding-bottom: 1rem;
+ 
+  padding-bottom:2rem;
 }
 
 .services{
@@ -637,25 +635,28 @@ https://airborneimmigration.com/?gclid=CjwKCAiA3pugBhAwEiwAWFzwdbEKBuR4L9B5i41_f
 }
 
 .services-cards{
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding:2rem;
-  flex-wrap: nowrap;
+  flex-wrap: nowrap; */
+  display:block;
+  padding:10rem 2rem 10rem 2rem;
+  text-align: center;
   /* background-color: red; */
 }
 
 .cards{
-  margin-right: 0;
+  /* margin-right: 0;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
 }
 
 .content{
-  height: 40rem;
-  /* justify-content: space-around; */
+  /* display: flex; */
+  padding:2rem;
 }
 
 .salary{
@@ -675,12 +676,18 @@ table{
 }
 
 .appreciation{
-  height: 60vh;
-  gap:3rem;
+  /* height: 60vh;
+  gap:3rem; */
+  /* display: block;
+  text-align: center; */
+  padding:2rem;
+  min-height: 50vh;
+  height: auto;
+
 }
 
 .appreciation button{
-  margin-top:20rem;
+  /* margin-top:20rem; */
 }
 
 .hor-div.testup, .hor-div.testdown{
@@ -710,38 +717,60 @@ table{
 .cross-btn{
   height: 3rem;
   width: 3rem;
-  top:15rem;
+  top:10%;
+  right:5%;
 }
 
 .hero-form{
-  top:1%0;
+  top:40%;
   width:90%;
   /* height: 90vh; */
 }
 
+.hidden-content{
+  top:1%;
+  text-align: left;
+}
+
 
 
 
 
 }
 
-@media screen and (min-width: 768px) and (max-width: 991px) {
+@media screen and (min-width: 767px) and (max-width: 991px) {
   /* Styles for tablets */
   html{
     font-size:50%;
   }
   .services-cards{
-    width:80vw;
-    margin:auto;
+    display: block;
 
   }
-  .cards{
 
-   
+  .assessment{
+    width:100vw;
+    height: auto;
+    display: block;
+    /* flex-direction: column;
+    justify-content: space-between;
+    align-items: center; */
+     padding:5rem;
+    text-align: center;
   }
-  .content{
-    width:40vw;
+  .assessment .left{
+    padding:0rem;
   }
+  .assessment .right{
+    padding-bottom:2rem;
+  }
+  .cross-btn{
+    height: 3rem;
+    width: 3rem;
+    top:20%;
+    right:30%;
+  }
+
 }
 
 @media screen and (min-width: 992px) and (max-width:1300px) {
