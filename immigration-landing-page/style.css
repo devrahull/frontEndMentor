@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
 }
 html{
   font-size: 62.5%;
@@ -14,6 +15,7 @@ body{
   font-family: 'Open Sans', sans-serif;
   font-family: 'Poppins', sans-serif;
   font-family: 'Roboto', sans-serif;
+  overflow-x:hidden;
   
 }
 
@@ -42,7 +44,8 @@ p{
 nav{
 
   height:9.6rem;
-  background-color:black;
+  /* background-color:black; */
+  background-color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -101,42 +104,32 @@ nav button{
 }
 
 
-
-.hero-form{
-  position:fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display:flex;
-  flex-direction:column;
-  width: 40%;
-  height: 60%;
-  gap:1.6rem;
-  /* display:none; */
-
-}
-
 .hero-form button{
   height:4.8rem;
   width:16rem;
 }
-
-.form-div{
-  display: none;
-}
-form {
-  border-radius: 1rem;
-  padding: 2rem;
-  background-color: #e8000d;
-  box-shadow: 0 .5rem .5rem rgba(0, 0, 0, 0.5);
-}
-
-input, textarea {
+.close-btn{
+  height:4.8rem;
+  width:16rem;
   border-radius: .5rem;
+  /* background-color: #007bff; */
+  color: #fff;
+  padding: 1rem 2rem;
   border: none;
-  padding: 1rem;
-  margin-bottom: 1rem;
+  cursor: pointer;
+  box-shadow: 0 .5rem .5rem rgba(0, 0, 0, 0.5); 
+  transition: transform 0.3s ease-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+.close-btn:hover{
+  background-color: #0056b3;
+  transform: scale(1.1);
+  z-index: 1;
+}
+
+
 
 button {
   border-radius: .5rem;
@@ -155,17 +148,65 @@ button:hover {
   z-index: 1;
 }
 
-.immigration{
-  width: 100%;
-  height: 40rem;
-  text-align: center;
+.form-div{
+  display: none;
+}
+
+
+form{
+
+  position:fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width:25vw;
+  height: auto;
+  background-color: ;
+  padding:5rem 2rem;
+  gap:1rem;
+  background-color: #f1f3f4;
+}
+
+form input{
+  height: 5rem;
+  border:none;
+  border-bottom:.1rem solid lightgrey;
+  background-color: white;
+  padding:.5rem;
+
+}
+
+form input:focus{
+  outline: none;
+}
+
+.btns{
+  display: flex;
+  gap:1rem;
+  justify-content: center;
+}
+.btn{
+
+  background-color: #e8000d;
+}
+
+
+.immigration{
+  width: 100%;
+  height: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
   align-items: center;
   gap:1.6rem;
-  padding:16rem;
+  padding:5rem;
   /* background-color: red; */
+  /* overflow:auto; */
+  
 
 }
 
@@ -174,8 +215,50 @@ button:hover {
   color:#061f5c;
 }
 
-.immigration p{
-  font-weight: 300;
+
+.immigration_container{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width:60vw;
+  height: auto;
+  flex-wrap: wrap;
+  /* background-color:yellow; */
+
+}
+.immigration_container div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width:50%;
+  height: 50%;
+  padding:2rem;
+  
+
+
+  
+}
+.immigration_container img{
+  display: block;
+  margin-bottom: 1rem;
+  height: 80%;
+  width: 90%;
+
+  background-color: white;
+  box-shadow: 0 .5rem .5rem rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease-out;
+}
+
+.immigration_container img:hover{
+  transform: scale(1.1);
+  /* transform: translateY(-10px); */
+  z-index: 10;
+}
+
+.immigration_container p{
+  font-weight: bold;
+
 }
 .assessment{
 
@@ -223,8 +306,63 @@ button:hover {
   opacity: 1;
 }
 .services{
+  width: 100vw;
   padding:1rem;
   background-color: #f5f5f5;
+  height: auto;
+}
+.services_container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap:wrap;
+  width:80vw;
+  margin:3rem auto;
+  height: auto;
+  gap:6rem;
+  /* background-color:yellow; */
+
+}
+
+.services_container div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width:30%;
+  height:50%;
+  /* border:.1px solid black; */
+  padding:1rem;
+  background-color: white;
+  box-shadow: 0 .5rem .5rem rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease-out;
+
+
+
+}
+
+.services_container div:hover{
+  transform: scale(1.1);
+  /* transform: translateY(-10px); */
+  z-index: 10;
+}
+
+.services_container img{
+  height: 80%;
+  width: 90%;
+  margin-bottom:1rem;
+  border:.5rem solid #061f5c;;
+  border-radius: 3rem;
+
+}
+
+.services_container h3, p{
+margin-bottom:1rem;
+text-align: center;
+}
+
+.services_container p{
+  font-size:small;
 }
 .services h2{
   text-align: center;
@@ -234,63 +372,6 @@ button:hover {
   /* border:.5px  solid black; */
 }
 
-.services-cards{
-  
-  display:flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  padding:16rem 16rem 16rem 16rem;
-  /* background-color:black; */
-  
-}
-
-.card{
-  position:relative;
-  flex-basis: calc(33.33% - 10px);
-  margin-right: 10px;
-  margin-bottom: 10px;
-  height:35.5rem;
-  /* position: relative; */
-  background-color: white;
-  box-shadow: 0 .5rem .5rem rgba(0, 0, 0, 0.5);
-  transition: transform 0.3s ease-out;
-}
-
-.card:hover{
-  transform: scale(1.1);
-  /* transform: translateY(-10px); */
-  z-index: 1;
-}
-
-/* .card:nth-child(3n){
-  margin-right: 0;
-} */
-
-.content{
-  height: 100%;
-  width:100%;
-  display:flex;
-  flex-direction: column;
-  justify-content:space-between;
-  align-items:center;
-  gap:1.6rem;
-  padding:3.2rem;
-}
-.card.odd{
-  background-color:#e8000d;
-  color:white;
-  font-family: 'Poppins', sans-serif;
-  /* position:relative; */
-  
-}
-
-.card.even{
-  /* background-color: #3f5986; */
-  font-family: 'Poppins', sans-serif;
-  color:black;
-  /* position:relative; */
-}
 
 .hor-div{
   background-color: #e09900;
@@ -397,33 +478,6 @@ td{
 }
 
 
-.stay-in-touch{
-  display:flex;
-  
-  width:100%;
-  /* margin:5rem auto; */
-  height: auto;
-  justify-content: space-between;
-  align-items: center;
-  padding:0 8rem 0 8rem;
-
-  /* gap:1rem; */
-  /* border:.5px solid red; */
-  /* background-color: #f5f5f5; */
-  background-color: white;
-  /* border-radius:1rem; */
-  /* box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5); */
-}
-
-.stay-in-touch-form{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap:1.6rem;
-  display:none;
-}
-
 .social-media{
   width:30%;
   height: auto;
@@ -444,30 +498,6 @@ footer{
   background-color: white;
 }
 
-.hidden-content{
-  
-  display:none;
-  position: fixed;
-  top:10%;
-  /* border:.5px solid black; */
-  width:50%;
-  min-height:32rem;
-  height: auto;
-  margin:8rem;
-  border-radius:1.6rem;
-  background-color: white;
-  padding:4.8rem;
-  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
-  z-index:99;
-}
-.hidden-content ul{
- 
-  display:flex;
-  flex-direction:column;
-  gap:1.6rem;
-  margin:1.6rem;
-  font-size:1.6rem;
-}
 
 #upward-icon{
   position: fixed;
@@ -476,8 +506,6 @@ footer{
   height:3.2rem;
   width:3.2rem;
   border-radius:.8rem;
-  /* background-color: #939393; */
-  /* background-color:#0056b3; */
   background-color: white;
   border:.1px solid #939393;
   display: none;
@@ -500,21 +528,6 @@ footer{
 
 }
 
-.cross-btn{
-
-  height: 3rem;
-  width: 3rem;
-  position: fixed;
-  top:20%;
-  right:30%;
-  display:none;
-  z-index:99;
-  transition: transform 0.3s ease-out;
-}
-.cross-btn:hover{
-  transform: scale(1.1);
-  z-index: 1;
-}
 
 
 /* 
@@ -526,56 +539,46 @@ https://airborneimmigration.com/?gclid=CjwKCAiA3pugBhAwEiwAWFzwdbEKBuR4L9B5i41_f
 
 /* /////////////////////////////// */
 
-.testimonial {
-  background-color: #f9f9f9;
-  padding: 6rem 0;
-  text-align: center;
-}
 
-.testimonial-container {
+.client_testimonial{
   display: flex;
-  justify-content: space-between;
-  /* overflow-x: scroll; */
-  /* scroll-behavior: smooth; */
-  width: 100%;
-  /* max-width: 1200px; */
-  margin: 0 auto;
-}
-.testimonial-slides-content{
-  width:50%;
+  width: 100vw;
   height: auto;
-  margin:auto;
+}
+.client_testimonial_container{
+  display: flex;
+  flex-wrap: wrap;
+  gap:2rem;
+  padding:3rem;
+  justify-content: center;
+  align-items: center;
+}
+.item{
+  background-color:white;
+  border:.1px solid lightgrey;
+  height: auto;
+  width:30vw;
+  padding:2rem;
+  gap:2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
 }
-.testimonial-item {
-  flex-basis: calc(33.33% - 20px);
-  padding: 2rem;
-  background-color: #fff;
-  box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, 0.1);
-  text-align: center;
-  transition: transform 0.3s ease-in-out;
+
+.user_detail{
+  /* background-color:yellow; */
+  display: flex;
+  gap:2rem;
+  align-items: center;
 }
 
-.testimonial-item:hover {
-  transform: translateY(-1rem);
+.figure img{
+  height: 6rem;
+  width: 6rem;
+  border-radius:50%;
 }
-
-.testimonial-item img {
-  width: 8rem;
-  height: 8rem;
-  border-radius: 50%;
-  margin-bottom:1.6rem;
-}
-
-.testimonial-item h4 {
-  margin-bottom: .5rem;
-}
-
-.testimonial-item p:last-child {
-  margin-top: .5rem;
-  font-size: 0.8em;
-}
-
 
 
 @media screen and (max-width: 766px) {
@@ -583,6 +586,10 @@ https://airborneimmigration.com/?gclid=CjwKCAiA3pugBhAwEiwAWFzwdbEKBuR4L9B5i41_f
 
   html{
     font-size:45%;
+    overflow-x:hidden;
+  }
+  nav{
+    display:none;
   }
   
 .hero-section{
@@ -597,22 +604,38 @@ https://airborneimmigration.com/?gclid=CjwKCAiA3pugBhAwEiwAWFzwdbEKBuR4L9B5i41_f
 
 .immigration{
   width:100vw;
-  height: 40rem;
-  /* padding:16rem; */
-  padding:4rem;
-  justify-content: space-evenly;
+  height: auto;
+  padding:0rem;
+  display:block;
+  /* justify-content: space-evenly; */
 }
+
+.immigration_container{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width:100vw;
+  height: auto;
+  gap:1rem;
+  /* background-color:yellow;  */
+  margin-top:2rem;
+}
+
+.immigration_container div{
+  width:80%;
+  margin:auto;
+
+}
+
+
 
 .immigration p{
   text-align: left;
 }
 
 .assessment{
-  height:auto;
-  /* display:flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center; */
+  height:auto;  
   display: block;
   text-align: center;
   padding:4rem 2rem 2rem 2rem;
@@ -632,62 +655,48 @@ https://airborneimmigration.com/?gclid=CjwKCAiA3pugBhAwEiwAWFzwdbEKBuR4L9B5i41_f
 .services{
   width:100vw;
   height: auto;
-}
-
-.services-cards{
-  /* display: flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding:2rem;
-  flex-wrap: nowrap; */
-  display:block;
-  padding:10rem 2rem 10rem 2rem;
-  text-align: center;
-  /* background-color: red; */
 }
 
-.cards{
-  /* margin-right: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center; */
-}
-
-.content{
-  /* display: flex; */
-  padding:2rem;
-}
-
-.salary{
-  gap:5rem;
-  padding:1rem;
-  text-align: center;
-  /* height: 100vh; */
-}
-
-table{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  margin-bottom: 5rem;
-  /* gap:1rem; */
-}
-
-.appreciation{
-  /* height: 60vh;
-  gap:3rem; */
-  /* display: block;
-  text-align: center; */
-  padding:2rem;
-  min-height: 50vh;
+.services_container{
+  width:100vw;
   height: auto;
-
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.appreciation button{
-  /* margin-top:20rem; */
+.services_container div{
+  width:80vw;
+  margin:auto;
+}
+
+.client_testimonial{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:100vw;
+  height: auto;
+}
+
+.client_testimonial_container{
+  display: flex;
+  flex-direction:column;
+  width:100vw;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.item{
+  display: flex;
+  flex-direction: column;
+  width:80vw;
+  margin:auto;
 }
 
 .hor-div.testup, .hor-div.testdown{
@@ -714,17 +723,17 @@ table{
   width: 3rem;
 }
 
-.cross-btn{
-  height: 3rem;
-  width: 3rem;
-  top:10%;
-  right:5%;
-}
 
-.hero-form{
+
+.form-div{
   top:40%;
   width:90%;
   /* height: 90vh; */
+
+}
+form{
+  height: 50%;
+  width: 70%;
 }
 
 .hidden-content{
